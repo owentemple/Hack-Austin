@@ -22,12 +22,13 @@ Click [here]((https://www.arcgis.com/home/webmap/viewer.html?webmap=d60ad3e973a5
 ![Austin Fire Department Response Times.png](https://media.data.world/6ljiSKrTSOi3WPnwubUk_Austin%20Fire%20Department%20Response%20Times.png)
 
 
-### Triage Response Areas:
+## Key Features in Late Responses
+
 Our random forest classifier model predicted late responses in some areas of the city  more than others. Perhaps we can use these insights to design very targeted interventions to reduce common causes of fires in these areas.
 
 Our random forest classification model cited the following response areas as important features in predicting a late response:
 
-#### Response Area /  Neighborhood Name:
+#### Response Area /  Neighborhood Name
 - 2703	/ Travis Country
 - 3810	/ Town and Country Park Addition (north of MacNeil)
 - 0402	/ Pemberton
@@ -38,15 +39,15 @@ Our random forest classification model cited the following response areas as imp
 - 4108	/ Wildhorse
 - 3602	/ Onion Creek
 
-![Response Areas That Predicted Late Responses.png](https://media.data.world/aB4qNFIaTUGcF4164GIR_Response%20Areas%20That%20Predicted%20Late%20Responses.png)
-
-Our random forest classification model also identified day of week (and particularly Monday) as a key feature for predicting a late response.
-
-![Late Responses by Day of Week in Response Areas with Late Arrivals.png](https://media.data.world/8z5kGEWsQkyCsxqTn44E_Late%20Responses%20by%20Day%20of%20Week%20in%20Response%20Areas%20with%20Late%20Arrivals.png)
-
+#### Problem Type
 Within response areas that were associated with late responses in 2015 and 2016, these were the various problem types:
 
 ![Late Responses by Problem Type Since 2015 in Response Areas with Late Arrivals.png](https://media.data.world/rbDfbvFIRU22Bn4CjFHw_Late%20Responses%20by%20Problem%20Type%20Since%202015%20in%20Response%20Areas%20with%20Late%20Arrivals.png)
+
+#### Day of the Week
+Our random forest classification model also identified day of week (and particularly Monday) as a key feature for predicting a late response.
+
+<img src="https://media.data.world/8z5kGEWsQkyCsxqTn44E_Late%20Responses%20by%20Day%20of%20Week%20in%20Response%20Areas%20with%20Late%20Arrivals.png" height=40%  width=40%>
 
 
 By noting the surrounding circumstances of late responses, we can perhaps take steps to prevent these types of fires in the problem areas on the days of the week identified by the model. Instead of raising priorities of problems through tragedies, we can help raise priorities through good data analytics. 
