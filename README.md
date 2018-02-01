@@ -8,7 +8,7 @@
 
 <a href="https://austinstrategicplan.bloomfire.com/posts/1496098-2-winners-announced-at-civic-hackathon"><img src="Hack%20Austin%20Winning%20Team%20Photo.png" height=40%  width=40%  alt="Winning Team at Hack Austin"></a>
 
-A late response by Austin Fire Department is defined as the first unit arriving on the scene of a fire 6 minutes or more after the original emergency phone call was received.
+A late response by Austin Fire Department is defined as the first unit arriving on the scene of a fire 8 minutes or more after the original emergency phone call was received.
 
 ### Predictive Mapping
 Our time series model used past call volume and response times to forecast call volume and response times in 2018 and 2019. Our model forecasted trends and seasonality in average response times for all Austin areas combined.
