@@ -3,6 +3,7 @@ PROCESSED_DIR = "processed"
 TARGET = "late_response"
 NON_PREDICTORS = [
             TARGET,
+    'index',
     'AFD Time Phone Pickup',
     'Master Incident Number',
     'CalendarYear',

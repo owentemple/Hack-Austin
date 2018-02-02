@@ -12,7 +12,7 @@ from sklearn.tree import DecisionTreeClassifier
 
 
 def read_data():
-    df = pd.read_csv(os.path.join('..', settings.PROCESSED_DIR, "all_years_with_RT-and-PT.csv")
+    df = pd.read_csv(os.path.join('..', settings.PROCESSED_DIR, "all_years_with_RT-and-PT.csv"))
     return df
 
 # Fit decision tree regressor using features and response variable set in settings.py
