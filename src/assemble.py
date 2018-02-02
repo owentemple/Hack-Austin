@@ -3,6 +3,7 @@ import sys
 module_path = os.path.abspath(os.path.join('..'))
 if module_path not in sys.path:
     sys.path.append(module_path)
+import settings
 import pandas as pd
 import numpy as np
 
@@ -74,8 +75,19 @@ def concatenate():
                                     'PriorityDescription_x': 'PriorityDescription'}, inplace=True)
 
     detail_final_df.to_csv(os.path.join('..', 'All Years with Response Times and Problem Types.csv'))
-    return detail_final_df
+    df = detail_final_df
+    return df
+
+def create_dummies(df):
+    df = pd.get_dummies(df, columns=['Problem', 'ResponseArea', 'day_of_week', 'hour'])
+    return df
+
+def write_data():
+    df.to_csv(os.path.join('..', settings.PROCESSED_DIR, "all_years_with_RT-and-PT.csv"))
+    pass
 
 
 if __name__ == "__main__":
     df = concatenate()
+    df = create_dummies(df)
+    write_data()
