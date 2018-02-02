@@ -22,7 +22,7 @@ def limit_time_period(df):
 # Prints the summary page to show coefficients, p-values, and R squared
 def create_summary_linear(df):
     lr = LinearRegression()
-    predictors = ['day_of_week_0', 'day_of_week_3', 'day_of_week_2', 'Problem_AUTO - Auto Fire', 'day_of_week_1']
+    predictors = ['day_of_week_1', 'day_of_week_2','day_of_week_3', 'day_of_week_4', 'day_of_week_5', 'day_of_week_6', 'Problem_AUTO - Auto Fire', 'Problem_BBQ - Unsafe Cooking', 'Problem_BOX -Structure Fire', 'Problem_BOXL- Structure Fire',  'Problem_DUMP - Dumpster Fire', 'Problem_ELEC - Electrical Fire', 'Problem_GRASS - Small Grass Fire','Problem_TRASH - Trash Fire']
     lr.fit(df[predictors], df['Response Time (m)'])
 
     X = df[predictors]
@@ -39,7 +39,8 @@ def create_summary_logistic(df):
     from scipy import stats
     stats.chisqprob = lambda chisq, df: stats.chi2.sf(chisq, df)
     lr = LogisticRegression()
-    predictors = ['day_of_week_0', 'day_of_week_3', 'day_of_week_2', 'Problem_AUTO - Auto Fire', 'day_of_week_1']
+    # omits to put 'day_of_week_0' or 'Problem_BRSHL - Brush Alarm / Light' in the model as these will be the constants
+    predictors = ['day_of_week_1', 'day_of_week_2','day_of_week_3', 'day_of_week_4', 'day_of_week_5', 'day_of_week_6', 'Problem_AUTO - Auto Fire', 'Problem_BBQ - Unsafe Cooking', 'Problem_BOX -Structure Fire', 'Problem_BOXL- Structure Fire',  'Problem_DUMP - Dumpster Fire', 'Problem_ELEC - Electrical Fire', 'Problem_GRASS - Small Grass Fire','Problem_TRASH - Trash Fire']
     lr.fit(df[predictors], df['late_response'])
 
     X = df[predictors]
