@@ -1,5 +1,6 @@
 DATA_DIR = "data"
 PROCESSED_DIR = "processed"
+YEARS_OF_ANALYSES = 2016
 TARGET = "late_response"
 NON_PREDICTORS = [
             TARGET,

@@ -15,6 +15,10 @@ def read_data():
     df = pd.read_csv(os.path.join('..', settings.PROCESSED_DIR, "all_years_with_RT-and-PT.csv"))
     return df
 
+def limit_time_period(df):
+    df = df[df['CalendarYear'] >= settings.YEARS_OF_ANALYSES]
+    return df
+
 # Fit decision tree regressor using features and response variable set in settings.py
 # Prints feature importances sorted by descending by magnitude
 def sort_important_features(df):
@@ -45,6 +49,7 @@ def print_tree(model):
 
 if __name__ == "__main__":
     df = read_data()
+    df = limit_time_period(df)
     model = sort_important_features(df)
     print_tree(model)
 
