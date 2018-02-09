@@ -56,9 +56,10 @@ def concatenate():
     AFD_14 = pd.read_csv(os.path.join('..', settings.DATA_DIR, 'AFD_Fire_Incidents_2014_January_Thru_December.csv'))
     AFD_15 = pd.read_csv(os.path.join('..', settings.DATA_DIR, 'AFD_Fire_Incidents_2015_January_Thru_December.csv'))
     AFD_16 = pd.read_csv(os.path.join('..', settings.DATA_DIR, 'AFD_Fire_Incidents_2016_January_Thru_December.csv'))
+    AFD_17 = pd.read_csv(os.path.join('..', settings.DATA_DIR, 'AFD_Fire_Incidents_2017_January_Thru_December.csv'))
 
     # Concatenate all years incident detail reports into one dataframe
-    frames = [AFD_13, AFD_14, AFD_15, AFD_16]
+    frames = [AFD_13, AFD_14, AFD_15, AFD_16, AFD_17]
     result = pd.concat(frames)
     result = result.rename(index=str, columns={"MasterIncidentNumber": "Master Incident Number"})
 
